@@ -6,11 +6,7 @@ Built by Amir Nagiyev, QAIRU AI & ML, Astana, 2026.
 
 ## Run locally
 
-```bash
-python -m http.server 8080
-```
-
-Then open http://localhost:8080.
+Open https://aif-endterm-book-an.vercel.app/#cover.
 
 ## Deploy
 
