@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Fundamentals: Endterm Book</title>
+<meta name="description" content="Interactive 3D book: a complete 10-week AI Fundamentals engineering compendium by Amir Nagiyev.">
+<meta name="theme-color" content="#09090b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23121214'/%3E%3Cpath d='M8 24 14 14 22 18 25 8' fill='none' stroke='%23d9b384' stroke-width='2'/%3E%3Ccircle cx='8' cy='24' r='3' fill='%23d9b384'/%3E%3Ccircle cx='25' cy='8' r='3' fill='%23d9b384'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vendor/katex/katex.min.css">
+<link rel="stylesheet" href="css/book.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><span class="brand-mark" aria-hidden="true"></span>AI Fundamentals</div>
+  <nav class="jump" id="jump" aria-label="Jump to section"></nav>
+  <button class="btn primary" id="openPoster" type="button">Exhibition 16:9 QR Card</button>
+</header>
+
+<main class="scene" id="scene">
+  <div class="book" id="book" aria-live="off"></div>
+</main>
+
+<footer class="ctl">
+  <button class="btn" id="prev" type="button">← Prev</button>
+  <div class="where" id="where" aria-live="polite"></div>
+  <button class="btn ghost" id="readBtn" type="button">Read</button>
+  <button class="btn" id="next" type="button">Next →</button>
+</footer>
+
+<dialog class="sheet" id="reader" aria-label="Large-print reader">
+  <div class="sheet-head">
+    <button class="btn" id="rPrev" type="button">← Prev</button>
+    <div class="where" id="rWhere"></div>
+    <button class="btn" id="rNext" type="button">Next →</button>
+    <button class="btn ghost" id="rClose" type="button" aria-label="Close reader">Close</button>
+  </div>
+  <div class="reader-body" id="rBody"></div>
+</dialog>
+
+<dialog class="sheet poster" id="poster" aria-labelledby="posterTitle">
+  <div class="sheet-head">
+    <h2 id="posterTitle">Exhibition Card (16:9)</h2>
+    <button class="btn ghost" id="pClose" type="button">Close</button>
+  </div>
+  <div class="poster-body">
+    <canvas id="posterCanvas" width="1920" height="1080" role="img" aria-label="Preview of the 1920 by 1080 exhibition card"></canvas>
+    <div class="poster-form">
+      <label for="deployUrl">Final deploy URL</label>
+      <input id="deployUrl" type="url" inputmode="url" autocomplete="off" spellcheck="false" placeholder="https://your-project.vercel.app">
+      <button class="btn primary" id="pDownload" type="button">Download 16:9 PNG</button>
+      <p class="hint" id="pHint"></p>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="vendor/katex/katex.min.js"></script>
+<script src="vendor/qrcode.js"></script>
+<script src="js/content.js"></script>
+<script src="js/book.js"></script>
+<script src="js/review.js"></script>
+<script src="js/poster.js"></script>
+</body>
+</html>
